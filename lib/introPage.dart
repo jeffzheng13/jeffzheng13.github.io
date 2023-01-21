@@ -74,19 +74,20 @@ class _introPageState extends State<introPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     //About Me Button
+                    Padding(padding: EdgeInsets.all(size.width / 100)),
                     OutlinedButton(
                       style: ButtonStyle(
-                          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(const EdgeInsets.all(10.0)),
-                          side: MaterialStateProperty.resolveWith<BorderSide>(
-                              (states) => BorderSide(
-                                  color: Colors.white)),
-                          shape:
-                              MaterialStateProperty.resolveWith<OutlinedBorder>(
-                                  (_) {
-                            return RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(60));
-                          }),
-                        ),
+                        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                            const EdgeInsets.all(10.0)),
+                        side: MaterialStateProperty.resolveWith<BorderSide>(
+                            (states) => BorderSide(color: Colors.white)),
+                        shape:
+                            MaterialStateProperty.resolveWith<OutlinedBorder>(
+                                (_) {
+                          return RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(60));
+                        }),
+                      ),
                       onPressed: null,
                       child: const Text("About Me",
                           style: TextStyle(color: Colors.white, fontSize: 20)),
@@ -95,10 +96,11 @@ class _introPageState extends State<introPage> {
                     //My Projects Button
                     OutlinedButton(
                         style: ButtonStyle(
-                          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(const EdgeInsets.all(10.0)),
+                          padding:
+                              MaterialStateProperty.all<EdgeInsetsGeometry>(
+                                  const EdgeInsets.all(10.0)),
                           side: MaterialStateProperty.resolveWith<BorderSide>(
-                              (states) => BorderSide(
-                                  color: Colors.white)),
+                              (states) => BorderSide(color: Colors.white)),
                           shape:
                               MaterialStateProperty.resolveWith<OutlinedBorder>(
                                   (_) {
@@ -110,7 +112,9 @@ class _introPageState extends State<introPage> {
                           print("pressed");
                         }),
                         child: const Text("My Projects",
-                            style: TextStyle(color: Colors.white, fontSize: 20)))
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20))),
+                    Padding(padding: EdgeInsets.all(size.width / 100)),
                   ],
                 )
               ],
