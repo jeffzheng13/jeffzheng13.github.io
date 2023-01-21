@@ -22,6 +22,7 @@ class _introPageState extends State<introPage> {
     return Scaffold(
         body: Stack(
       children: [
+        //Adds the background image
         Container(
             height: size.height,
             width: size.width,
@@ -30,9 +31,12 @@ class _introPageState extends State<introPage> {
                   image: AssetImage("assets/b_frank_w_me.JPG"),
                   fit: BoxFit.cover),
             )),
+        //Everything else is here
         Container(
             height: size.height,
             width: size.width,
+
+            //creates the dark filter on top of image
             decoration: BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.bottomCenter,
