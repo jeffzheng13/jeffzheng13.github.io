@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:personal_website/projectPage.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 /*
 TODO:
@@ -49,15 +51,19 @@ class _introPageState extends State<introPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  padding: const EdgeInsets.only(left: 35, right: 35),
-                  child: const Text(
-                    "Welcome!",
-                    style: TextStyle(
-                        fontFamily: 'Unbounded',
-                        color: Colors.white,
-                        fontSize: 50),
-                  ),
-                ),
+                    padding: const EdgeInsets.only(left: 35, right: 35),
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        TyperAnimatedText("Welcome! My name is Jeff...",
+                            textAlign: TextAlign.center,
+                            textStyle: const TextStyle(
+                                fontSize: 50, color: Colors.white),
+                            speed: const Duration(milliseconds: 90)),
+                      ],
+                    )),
+
+                //Consolidating text into one box
+                /*
                 Container(
                   padding: const EdgeInsets.only(left: 35, right: 35),
                   child: const Text(
@@ -68,7 +74,9 @@ class _introPageState extends State<introPage> {
                         fontSize: 50),
                   ),
                 ),
-                Padding(padding: EdgeInsets.only(top: 20, bottom: 20)),
+                */
+
+                const Padding(padding: EdgeInsets.only(top: 20, bottom: 20)),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -109,7 +117,10 @@ class _introPageState extends State<introPage> {
                           }),
                         ),
                         onPressed: (() {
-                          print("pressed");
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const projectPage()));
                         }),
                         child: const Text("My Projects",
                             style:

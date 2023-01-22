@@ -36,6 +36,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  animated_text_kit: ^4.2.2
+  vertical_card_pager: ^1.5.0
 
 dev_dependencies:
   flutter_test:
@@ -91,6 +93,12 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/b_frank_w_me.JPG
+    - assets/DALLE 2023-01-21 16.25.26 - clipart image of a pill with technology background.png
+    - assets/DALL·E 2023-01-21 16.25.42 - clipart image of a pill with technology background.png
+    - assets/DALL·E 2023-01-21 16.25.48 - clipart image of a pill with technology background.png
+    - assets/DALL·E 2023-01-21 16.26.30 - clipart image of a red and white pill with technology background.png
+    - assets/stemgearlogo.png
+    - assets/schedule.jpg
 
   fonts:
     - family: Unbounded
