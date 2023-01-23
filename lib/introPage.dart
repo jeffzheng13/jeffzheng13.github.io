@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:personal_website/projectPage.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -83,48 +84,52 @@ class _introPageState extends State<introPage> {
                   children: [
                     //About Me Button
                     Padding(padding: EdgeInsets.all(size.width / 100)),
-                    OutlinedButton(
-                      style: ButtonStyle(
-                        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                            const EdgeInsets.all(10.0)),
-                        side: MaterialStateProperty.resolveWith<BorderSide>(
-                            (states) => BorderSide(color: Colors.white)),
-                        shape:
-                            MaterialStateProperty.resolveWith<OutlinedBorder>(
-                                (_) {
-                          return RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(60));
-                        }),
-                      ),
+                    const OutlinedButton(
                       onPressed: null,
-                      child: const Text("About Me",
-                          style: TextStyle(color: Colors.white, fontSize: 20)),
+                      child: AnimatedButton(
+                        text: "About Me",
+                        width: 150,
+                        height: 30,
+                        onPress: null,
+                        animatedOn: AnimatedOn.onHover,
+                        textStyle: TextStyle(color: Colors.white, fontSize: 20),
+                        borderRadius: 60,
+                        borderWidth: 1,
+                        transitionType: TransitionType.LEFT_TO_RIGHT,
+                        selectedTextColor: Colors.black,
+                        backgroundColor: Colors.transparent,
+                        borderColor: Colors.white,
+                      ),
                     ),
 
                     //My Projects Button
                     OutlinedButton(
-                        style: ButtonStyle(
-                          padding:
-                              MaterialStateProperty.all<EdgeInsetsGeometry>(
-                                  const EdgeInsets.all(10.0)),
-                          side: MaterialStateProperty.resolveWith<BorderSide>(
-                              (states) => BorderSide(color: Colors.white)),
-                          shape:
-                              MaterialStateProperty.resolveWith<OutlinedBorder>(
-                                  (_) {
-                            return RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(60));
-                          }),
-                        ),
-                        onPressed: (() {
+                      onPressed: (() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const projectPage()));
+                      }),
+                      child: AnimatedButton(
+                        text: "My Projects",
+                        width: 160,
+                        height: 30,
+                        onPress: (() {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => const projectPage()));
                         }),
-                        child: const Text("My Projects",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 20))),
+                        animatedOn: AnimatedOn.onHover,
+                        textStyle: TextStyle(color: Colors.white, fontSize: 20),
+                        borderRadius: 60,
+                        borderWidth: 1,
+                        transitionType: TransitionType.LEFT_TO_RIGHT,
+                        selectedTextColor: Colors.black,
+                        backgroundColor: Colors.transparent,
+                        borderColor: Colors.white,
+                      ),
+                    ),
                     Padding(padding: EdgeInsets.all(size.width / 100)),
                   ],
                 )
