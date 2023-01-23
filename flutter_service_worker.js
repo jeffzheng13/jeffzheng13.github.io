@@ -4,9 +4,9 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
-"index.html": "fa975703e61333b6aacd2981bb6614fd",
-"/": "fa975703e61333b6aacd2981bb6614fd",
-"main.dart.js": "144713a334f59d28e568b6c477772ced",
+"index.html": "9c6709bfa8c80dcf2ad4dc60f39d193a",
+"/": "9c6709bfa8c80dcf2ad4dc60f39d193a",
+"main.dart.js": "5548e6825407629044a80fe89aa75f39",
 "manifest.json": "493757defcfefaf370ef90ea0954c227",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
@@ -14,7 +14,7 @@ const RESOURCES = {
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "assets/FontManifest.json": "3ffcc53c9188f183258a3785eefc49c1",
-"assets/NOTICES": "f14fba10fa40e00e38f4da9eff8e4cb2",
+"assets/NOTICES": "43d69f7919e4b89e60b666084f5894b3",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
 "assets/shaders/ink_sparkle.frag": "ab4751ef630837e294889ca64470bb70",
 "assets/assets/DALL%25C2%25B7E%25202023-01-21%252016.25.42%2520-%2520clipart%2520image%2520of%2520a%2520pill%2520with%2520technology%2520background.png": "eee3421935d7ea9ad61164da48cdb4e8",
