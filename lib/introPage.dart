@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
+import 'package:personal_website/aboutMe.dart';
 import 'package:personal_website/projectPage.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -48,6 +49,7 @@ class _introPageState extends State<introPage> {
                   Colors.black.withOpacity(0.8),
                   Colors.black.withOpacity(0.25)
                 ])),
+            //child contains Animated Text Title
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -84,15 +86,27 @@ class _introPageState extends State<introPage> {
                   children: [
                     //About Me Button
                     Padding(padding: EdgeInsets.all(size.width / 100)),
-                    const OutlinedButton(
-                      onPressed: null,
+                    OutlinedButton(
+                      onPressed: (() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const projectPage()));
+                      }),
+                      //Animated Button adds transition, may be able to remove outlined button
                       child: AnimatedButton(
                         text: "About Me",
                         width: 150,
                         height: 30,
-                        onPress: null,
+                        onPress: (() {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const aboutMe()));
+                        }),
                         animatedOn: AnimatedOn.onHover,
-                        textStyle: TextStyle(color: Colors.white, fontSize: 20),
+                        textStyle:
+                            const TextStyle(color: Colors.white, fontSize: 20),
                         borderRadius: 60,
                         borderWidth: 1,
                         transitionType: TransitionType.LEFT_TO_RIGHT,

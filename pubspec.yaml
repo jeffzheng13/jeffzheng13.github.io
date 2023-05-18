@@ -39,6 +39,9 @@ dependencies:
   animated_text_kit: ^4.2.2
   vertical_card_pager: ^1.5.0
   flutter_animated_button: ^2.0.2
+  url_launcher: ^6.1.8
+  transparent_image: ^2.0.1
+  ionicons: ^0.2.2
 
 dev_dependencies:
   flutter_test:
@@ -100,6 +103,9 @@ flutter:
     - assets/DALL·E 2023-01-21 16.26.30 - clipart image of a red and white pill with technology background.png
     - assets/stemgearlogo.png
     - assets/schedule.jpg
+    - assets/running.jpg
+    - assets/bingsuimage.jpg
+    - assets/lostatpittscreenshot.jpg
 
   fonts:
     - family: Unbounded
