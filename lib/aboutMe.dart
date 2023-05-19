@@ -91,6 +91,7 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
       padding: EdgeInsets.all(32),
       child: Text("My About Me Page -- Work in Progress ;)"));
 
+  //actions when icons are pressed
   void _onPressedGithub() {
     launchUrl(Uri.parse("https://github.com/jeffzheng13"));
   }
