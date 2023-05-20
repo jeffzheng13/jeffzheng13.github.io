@@ -52,7 +52,7 @@ class _projectPageState extends State<projectPage> {
         borderRadius: BorderRadius.circular(20.0),
         child: Image.asset(
           fit: BoxFit.cover,
-          "lostatpittscreenshot.jpg"
+          "assets/lostatpittscreenshot.jpg"
         ),
       ),
       ClipRRect(

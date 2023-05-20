@@ -1,6 +1,7 @@
 import 'dart:html';
 import 'dart:ui';
 
+import 'package:animate_do/animate_do.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:personal_website/introPage.dart';
 import 'package:personal_website/main.dart';
@@ -37,10 +38,9 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
         Container(
           height: size.height,
           width: size.width / 2,
-          child: FadeInImage.memoryNetwork(
-            placeholder: kTransparentImage,
-            image: "assets/bingsuimage.jpg",
-            fit: BoxFit.cover,
+          child: FadeIn(
+            duration: Duration(seconds: 2),
+            child: Image.asset("assets/bingsu.jpg", fit: BoxFit.cover),
           ),
         ),
         Container(
@@ -53,13 +53,14 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
                     padding: EdgeInsets.fromLTRB(100, size.height / 5, 100, 0)),
                 //first box will be header
                 Container(
-                  padding: EdgeInsets.all(5),
+                    padding: EdgeInsets.all(5),
                     child: const Text(
-                  "Jeffrey Zheng",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                )),
+                      "Jeffrey Zheng",
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    )),
                 //second box will be titles
-                Text("Software Engineer, CS Student, Avid Runner"),
+                Text("Software Engineer | Avid Runner | Tech Enthusiast"),
                 //third description box
                 aboutMeDescription,
                 //contains the icons to various links
