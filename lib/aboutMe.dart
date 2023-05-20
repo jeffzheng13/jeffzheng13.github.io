@@ -58,9 +58,10 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
                       "Jeffrey Zheng",
                       style:
                           TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
                     )),
                 //second box will be titles
-                Text("Software Engineer | Avid Runner | Tech Enthusiast"),
+                Text("Software Engineer | Avid Runner | Tech Enthusiast", softWrap: true, textAlign: TextAlign.center,),
                 //third description box
                 aboutMeDescription,
                 //contains the icons to various links
@@ -90,7 +91,7 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
 
   Widget aboutMeDescription = const Padding(
       padding: EdgeInsets.all(32),
-      child: Text("My About Me Page -- Work in Progress ;)"));
+      child: Text("My About Me Page -- Work in Progress ;)", softWrap: true,));
 
   //actions when icons are pressed
   void _onPressedGithub() {
