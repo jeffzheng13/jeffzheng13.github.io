@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:personal_website/ExpandingCards.dart';
+import 'package:personal_website/aboutMe.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -33,63 +35,68 @@ class _projectPageState extends State<projectPage> {
 
     //Project Urls go here?
     final List<Uri> urls = [
-      Uri.parse("https://steelhacks-2023.github.io/Lost-and-Found-Steelhacks/#/"),
       Uri.parse(
-          "https://tbeidlershenk.github.io/Pitt-Challenge/index.html")
+          "https://steelhacks-2023.github.io/Lost-and-Found-Steelhacks/#/"),
+      Uri.parse("https://tbeidlershenk.github.io/Pitt-Challenge/index.html")
     ];
 
-    //Awaits for launch 
+    //Awaits for launch
     Future<void> _launchUrl(int i) async {
       if (!await launchUrl(urls[i])) {
         throw Exception('Could not launch $urls[i]');
       }
     }
 
-    //Creates a list of each page for page viewer
-    //Length of images must equal length of titles ^^
-    final List<Widget> images = [
-      ClipRRect(
-        borderRadius: BorderRadius.circular(20.0),
-        child: Image.asset(
-          fit: BoxFit.cover,
-          "assets/lostatpittscreenshot.jpg"
-        ),
-      ),
-      ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
-          child: Image.asset(
-              fit: BoxFit.cover,
-              "assets/DALLE 2023-01-21 16.25.26 - clipart image of a pill with technology background.png")),
-      ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
-          child: Container(
-            color: Colors.grey,
-            child: Image.asset("assets/stemgearlogo.png"),
-          )),
-      ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
-          child: Container(
-            child: Image.asset(
-              "assets/schedule.jpg",
-              fit: BoxFit.cover,
-            ),
-          ))
+    final List<Map<String, dynamic>> items = [
+      {
+        'title': 'Lost@Pitt',
+        'subtitle': 'A virtual lost and found application',
+        'image': "assets/lostatpittscreenshot.jpg",
+        'icon': Icons.person_search,
+        'color': Colors.green.shade400,
+        //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
+      },
+      {
+        'title': 'Pill Identifier',
+        'subtitle':
+            'Machine learning model that was trained and transformed into an application that can identify pills.',
+        'image': "cutePill.png",
+        'icon': Icons.medication,
+        'color': Colors.red.shade400,
+        //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
+      },
+      {
+        'title': 'Tiger Tracker',
+        'subtitle': 'A bus tracking solution that utilizes ',
+        'image': "assets/stemgearlogo.png",
+        'icon': Icons.bus_alert,
+        'color': Colors.yellow.shade400,
+        //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
+      },
+      {
+        'title' : 'Schedule Builder',
+        'subtitle' : 'An application that determines the slots where people have open time slots in a given week',
+        'image' : "assets/schedule.jpg",
+        'icon' : Icons.event_available,
+        'color' : Colors.blue.shade400,
+        //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
+      }
     ];
 
     return Scaffold(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.grey.shade800,
         body: SafeArea(
-            child: Column(children: [
-          Container(
-            width: size.width,
-            height: size.height,
-            child: VerticalCardPager(
-              titles: titles,
-              images: images,
-              textStyle: TextStyle(color: Colors.black.withOpacity(1)),
-              onSelectedItem: ((index) => _launchUrl(index)),
+            child: Expanded(
+                child: 
+          Center(
+            child: FittedBox(
+              fit: BoxFit.fitWidth,
+              child: ExpandingCards(
+                height: 400,
+                items: items,
+              ),
             ),
-          ),
-        ])));
+          )
+        )));
   }
 }
