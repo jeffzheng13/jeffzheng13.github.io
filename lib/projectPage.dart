@@ -86,7 +86,6 @@ class _projectPageState extends State<projectPage> {
     return Scaffold(
         backgroundColor: Colors.grey.shade800,
         body: SafeArea(
-            child: Expanded(
                 child: 
           Center(
             child: FittedBox(
@@ -97,6 +96,6 @@ class _projectPageState extends State<projectPage> {
               ),
             ),
           )
-        )));
+        ));
   }
 }
