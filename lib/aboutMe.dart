@@ -37,7 +37,7 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
     return Scaffold(
         body: Row(
       children: [
-        Container(
+        SizedBox(
           height: size.height,
           width: size.width / 2,
           child: FadeIn(
@@ -57,7 +57,7 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
                             EdgeInsets.fromLTRB(100, size.height / 5, 100, 0)),
                     //first box will be header
                     Container(
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                         child: const Text(
                           "Jeffrey Zheng",
                           style: TextStyle(
@@ -65,19 +65,19 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
                           textAlign: TextAlign.center,
                         )),
                     //second box will be titles
-                    Text(
+                    const Text(
                       "Software Engineer | Avid Runner | Tech Enthusiast",
                       softWrap: true,
                       textAlign: TextAlign.center,
                     ),
                     //third description box
                     aboutMeDescription,
-                    Padding(padding: EdgeInsets.all(10)),
+                    const Padding(padding: EdgeInsets.all(10)),
                     AnimatedButton(
                         width: 160,
                         height: 25,
                         animatedOn: AnimatedOn.onHover,
-                        textStyle: TextStyle(color: Colors.black, fontSize: 15),
+                        textStyle: const TextStyle(color: Colors.black, fontSize: 15),
                         borderRadius: 60,
                         borderWidth: 1,
                         transitionType: TransitionType.LEFT_TO_RIGHT,
@@ -93,24 +93,22 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
                         })),
 
                     //contains the icons to various links
-                    Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          IconButton(
-                              onPressed: _onPressedGithub,
-                              icon: Icon(Ionicons.logo_github)),
-                          IconButton(
-                              onPressed: _onPressedLinkedin,
-                              icon: Icon(Ionicons.logo_linkedin)),
-                          IconButton(
-                              onPressed: _onPressedEmail,
-                              icon: Icon(Ionicons.mail)),
-                          IconButton(
-                              onPressed: _onPressedPhone,
-                              icon: Icon(Ionicons.call))
-                        ],
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                            onPressed: _onPressedGithub,
+                            icon: const Icon(Ionicons.logo_github)),
+                        IconButton(
+                            onPressed: _onPressedLinkedin,
+                            icon: const Icon(Ionicons.logo_linkedin)),
+                        IconButton(
+                            onPressed: _onPressedEmail,
+                            icon: const Icon(Ionicons.mail)),
+                        IconButton(
+                            onPressed: _onPressedPhone,
+                            icon: const Icon(Ionicons.call))
+                      ],
                     )
                   ],
                 )))
@@ -118,7 +116,7 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
     ));
   }
 
-  Widget aboutMeDescription = Padding(
+  Widget aboutMeDescription = const Padding(
       padding: EdgeInsets.fromLTRB(100, 32, 100, 0),
       child: Column(children: [
         Text(
