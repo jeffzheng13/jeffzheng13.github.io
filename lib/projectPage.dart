@@ -60,7 +60,7 @@ class _projectPageState extends State<projectPage> {
         'title': 'Pill Identifier',
         'subtitle':
             'Machine learning model that was trained and transformed into an application that can identify pills.',
-        'image': "cutePill.png",
+        'image': "assets/cutePill.png",
         'icon': Icons.medication,
         'color': Colors.red.shade400,
         //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
@@ -74,11 +74,12 @@ class _projectPageState extends State<projectPage> {
         //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
       },
       {
-        'title' : 'Schedule Builder',
-        'subtitle' : 'An application that determines the slots where people have open time slots in a given week',
-        'image' : "assets/schedule.jpg",
-        'icon' : Icons.event_available,
-        'color' : Colors.blue.shade400,
+        'title': 'Schedule Builder',
+        'subtitle':
+            'An application that determines the slots where people have open time slots in a given week',
+        'image': "assets/schedule.jpg",
+        'icon': Icons.event_available,
+        'color': Colors.blue.shade400,
         //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
       }
     ];
@@ -86,16 +87,20 @@ class _projectPageState extends State<projectPage> {
     return Scaffold(
         backgroundColor: Colors.grey.shade800,
         body: SafeArea(
-                child: 
+            child: 
           Center(
-            child: FittedBox(
+            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text("My Projects", style: TextStyle(fontSize: 30),),
+              Text("It's a work in progress :)", style: TextStyle(fontSize: 12),),
+              Padding(padding: EdgeInsets.all(32)),
+              FittedBox(
               fit: BoxFit.fitWidth,
               child: ExpandingCards(
                 height: 400,
                 items: items,
               ),
             ),
-          )
+          ]))
         ));
   }
 }
