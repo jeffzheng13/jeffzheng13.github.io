@@ -86,63 +86,46 @@ class _introPageState extends State<introPage> {
                   children: [
                     //About Me Button
                     Padding(padding: EdgeInsets.all(size.width / 100)),
-                    OutlinedButton(
-                      onPressed: (() {
+                    AnimatedButton(
+                      text: "About Me",
+                      width: 150,
+                      height: 30,
+                      onPress: (() {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const projectPage()));
+                                builder: (context) => const aboutMe()));
                       }),
-                      //Animated Button adds transition, may be able to remove outlined button
-                      child: AnimatedButton(
-                        text: "About Me",
-                        width: 150,
-                        height: 30,
-                        onPress: (() {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const aboutMe()));
-                        }),
-                        animatedOn: AnimatedOn.onHover,
-                        textStyle:
-                            const TextStyle(color: Colors.white, fontSize: 20),
-                        borderRadius: 60,
-                        borderWidth: 1,
-                        transitionType: TransitionType.LEFT_TO_RIGHT,
-                        selectedTextColor: Colors.black,
-                        backgroundColor: Colors.transparent,
-                        borderColor: Colors.white,
-                      ),
+                      animatedOn: AnimatedOn.onHover,
+                      textStyle:
+                          const TextStyle(color: Colors.white, fontSize: 20),
+                      borderRadius: 60,
+                      borderWidth: 1,
+                      transitionType: TransitionType.LEFT_TO_RIGHT,
+                      selectedTextColor: Colors.black,
+                      backgroundColor: Colors.transparent,
+                      borderColor: Colors.white,
                     ),
 
                     //My Projects Button
-                    OutlinedButton(
-                      onPressed: (() {
+                    AnimatedButton(
+                      text: "My Projects",
+                      width: 160,
+                      height: 30,
+                      onPress: (() {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const projectPage()));
                       }),
-                      child: AnimatedButton(
-                        text: "My Projects",
-                        width: 160,
-                        height: 30,
-                        onPress: (() {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const projectPage()));
-                        }),
-                        animatedOn: AnimatedOn.onHover,
-                        textStyle: TextStyle(color: Colors.white, fontSize: 20),
-                        borderRadius: 60,
-                        borderWidth: 1,
-                        transitionType: TransitionType.LEFT_TO_RIGHT,
-                        selectedTextColor: Colors.black,
-                        backgroundColor: Colors.transparent,
-                        borderColor: Colors.white,
-                      ),
+                      animatedOn: AnimatedOn.onHover,
+                      textStyle: TextStyle(color: Colors.white, fontSize: 20),
+                      borderRadius: 60,
+                      borderWidth: 1,
+                      transitionType: TransitionType.LEFT_TO_RIGHT,
+                      selectedTextColor: Colors.black,
+                      backgroundColor: Colors.transparent,
+                      borderColor: Colors.white,
                     ),
                     Padding(padding: EdgeInsets.all(size.width / 100)),
                   ],

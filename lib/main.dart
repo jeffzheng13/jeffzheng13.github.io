@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        title: "Jeffrey Zheng | Software Engineer | Tech Enthusiast",
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'Unbounded'),
         home: introPage());
