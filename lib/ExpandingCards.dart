@@ -1,4 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_button/flutter_animated_button.dart';
+
+//ExpandingCards template courtesy of @BirjuVachhani
 
 class ExpandingCards extends StatefulWidget {
   final double height;
@@ -50,7 +54,7 @@ class _ExpandingCardsState extends State<ExpandingCards>
               image: item['image'],
               icon: item['icon'] as IconData,
               iconColor: item['color'] as Color,
-              //learnMoreLink: item['learnMore'],
+              learnMoreLink: item['function'],
               isExpanded: _selectedIndex == index,
               animation: _controller,
               onTap: () => onExpand(_selectedIndex == index ? -1 : index),
@@ -84,7 +88,7 @@ class AnimatedCardItem extends StatefulWidget {
   final bool isExpanded;
   final VoidCallback onTap;
   final Color iconColor;
-  //final Future learnMoreLink;
+  final Route learnMoreLink;
 
   const AnimatedCardItem({
     super.key,
@@ -95,8 +99,8 @@ class AnimatedCardItem extends StatefulWidget {
     required this.animation,
     required this.isExpanded,
     required this.onTap,
-    required this.iconColor, 
-    //required this.learnMoreLink,
+    required this.iconColor,
+    required this.learnMoreLink,
   });
 
   @override
@@ -247,6 +251,7 @@ class _AnimatedCardItemState extends State<AnimatedCardItem> {
                                         ),
                                       ),
                                       // const SizedBox(height: 2),
+
                                       Opacity(
                                         opacity: subtitleValue,
                                         child: Transform.translate(
@@ -254,13 +259,48 @@ class _AnimatedCardItemState extends State<AnimatedCardItem> {
                                             20 * (1 - subtitleValue),
                                             0,
                                           ),
-                                          child: Text(
-                                            widget.subtitle,
-                                            maxLines: 1,
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 15,
-                                            ),
+                                          child: Row(
+                                            children: [
+                                              Expanded(
+                                                  child: RichText(
+                                                maxLines: 3,
+                                                softWrap: true,
+                                                overflow: TextOverflow.fade,
+                                                text: TextSpan(
+                                                    style: const TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 15),
+                                                    children: <TextSpan>[
+                                                      TextSpan(
+                                                          text:
+                                                              widget.subtitle),
+                                                      TextSpan(
+                                                          text: "...learn more",
+                                                          style: TextStyle(color: Colors.grey.shade800),
+                                                          recognizer:
+                                                              TapGestureRecognizer()
+                                                                ..onTap = (() {
+                                                                  Navigator.push(
+                                                                      context,
+                                                                      widget
+                                                                          .learnMoreLink);
+                                                                }))
+                                                    ]),
+                                              )),
+                                              // Text(widget.subtitle,
+                                              //     maxLines: 3,
+                                              //     style: const TextStyle(
+                                              //       color: Colors.white,
+                                              //       fontSize: 15,
+                                              //     )),
+                                              // AnimatedButton(
+                                              //   width: 16,
+                                              //   text: "Learn more",
+                                              //   onPress: () => Navigator.push(
+                                              //       context,
+                                              //       widget.learnMoreLink),
+                                              // ),
+                                            ],
                                           ),
                                         ),
                                       ),

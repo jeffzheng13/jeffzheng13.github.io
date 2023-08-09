@@ -99,15 +99,14 @@ flutter:
   assets:
     - assets/b_frank_w_me.JPG
     - assets/DALLE 2023-01-21 16.25.26 - clipart image of a pill with technology background.png
-    - assets/DALL·E 2023-01-21 16.25.42 - clipart image of a pill with technology background.png
     - assets/DALL·E 2023-01-21 16.25.48 - clipart image of a pill with technology background.png
     - assets/DALL·E 2023-01-21 16.26.30 - clipart image of a red and white pill with technology background.png
     - assets/cutePill.png
     - assets/stemgearlogo.png
     - assets/schedule.jpg
-    - assets/running.jpg
     - assets/bingsu.jpg
     - assets/lostatpittscreenshot.jpg
+    - assets/research.png
 
   fonts:
     - family: Unbounded

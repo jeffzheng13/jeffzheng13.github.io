@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_website/ExpandingCards.dart';
 import 'package:personal_website/aboutMe.dart';
@@ -54,7 +55,8 @@ class _projectPageState extends State<projectPage> {
         'image': "assets/lostatpittscreenshot.jpg",
         'icon': Icons.person_search,
         'color': Colors.green.shade400,
-        //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
+        'function': MaterialPageRoute(
+            builder: (BuildContext context) => const aboutMe())
       },
       {
         'title': 'Pill Identifier',
@@ -63,7 +65,8 @@ class _projectPageState extends State<projectPage> {
         'image': "assets/cutePill.png",
         'icon': Icons.medication,
         'color': Colors.red.shade400,
-        //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
+        'function': MaterialPageRoute(
+            builder: (BuildContext context) => const aboutMe())
       },
       {
         'title': 'Tiger Tracker',
@@ -71,7 +74,8 @@ class _projectPageState extends State<projectPage> {
         'image': "assets/stemgearlogo.png",
         'icon': Icons.bus_alert,
         'color': Colors.yellow.shade400,
-        //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
+        'function': MaterialPageRoute(
+            builder: (BuildContext context) => const aboutMe())
       },
       {
         'title': 'Schedule Builder',
@@ -80,27 +84,62 @@ class _projectPageState extends State<projectPage> {
         'image': "assets/schedule.jpg",
         'icon': Icons.event_available,
         'color': Colors.blue.shade400,
-        //'learnMore': Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const aboutMe()))
+        'function': MaterialPageRoute(
+            builder: (BuildContext context) => const aboutMe())
+      },
+      {
+        'title': 'Research Publication',
+        'subtitle':
+            'Ever wondered strategies beginner programmers use? Read more here, a paper I collaborated on with others.',
+        'image': '',
+        'icon': Icons.article,
+        'color': Colors.purple.shade400,
+        'function': MaterialPageRoute(
+            builder: (BuildContext context) => const aboutMe())
       }
     ];
 
     return Scaffold(
         backgroundColor: Colors.grey.shade800,
         body: SafeArea(
-            child: 
-          Center(
-            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Text("My Projects", style: TextStyle(fontSize: 30),),
-              Text("It's a work in progress :)", style: TextStyle(fontSize: 12),),
+            child: Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+              Align(
+                  alignment: Alignment.topCenter,
+                  child: SizedBox(
+                    height: size.height / 12,
+                    child: AnimatedTextKit(totalRepeatCount: 1, animatedTexts: [
+                      RotateAnimatedText(
+                        "Code",
+                        textStyle: TextStyle(fontSize: 40, color: Colors.white),
+                      ),
+                      RotateAnimatedText(
+                        "Build",
+                        textStyle: TextStyle(fontSize: 40, color: Colors.white),
+                      ),
+                      RotateAnimatedText(
+                        "Hack",
+                        textStyle: TextStyle(fontSize: 40, color: Colors.white),
+                      ),
+                      RotateAnimatedText(
+                        rotateOut: false,
+                        "My Projects",
+                        textStyle: TextStyle(fontSize: 40, color: Colors.white),
+                      )
+                    ]),
+                  )),
+              //Text("My Projects", style: TextStyle(fontSize: 30), ,),
+              //Text("It's a work in progress :)", style: TextStyle(fontSize: 12),),
               Padding(padding: EdgeInsets.all(32)),
               FittedBox(
-              fit: BoxFit.fitWidth,
-              child: ExpandingCards(
-                height: 400,
-                items: items,
+                fit: BoxFit.fitWidth,
+                child: ExpandingCards(
+                  height: 400,
+                  items: items,
+                ),
               ),
-            ),
-          ]))
-        ));
+            ]))));
   }
 }
