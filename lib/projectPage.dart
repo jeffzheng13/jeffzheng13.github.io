@@ -131,7 +131,7 @@ class _projectPageState extends State<projectPage> {
                     ]),
                   )),
               //Text("My Projects", style: TextStyle(fontSize: 30), ,),
-              //Text("It's a work in progress :)", style: TextStyle(fontSize: 12),),
+              Text("It's a work in progress :)", style: TextStyle(fontSize: 12),),
               Padding(padding: EdgeInsets.all(32)),
               FittedBox(
                 fit: BoxFit.fitWidth,
