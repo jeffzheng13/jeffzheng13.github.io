@@ -56,7 +56,11 @@ class _projectPageState extends State<projectPage> {
         'icon': Icons.person_search,
         'color': Colors.green.shade400,
         'function': MaterialPageRoute(
-            builder: (BuildContext context) => const aboutMe())
+            builder: (BuildContext context) => const aboutMe()),
+        'webLink': Uri.parse(
+            "https://steelhacks-2023.github.io/Lost-and-Found-Steelhacks/#/"),
+        'githubLink': Uri.parse(
+            "https://github.com/Steelhacks-2023/Lost-and-Found-Steelhacks")
       },
       {
         'title': 'Pill Identifier',
@@ -66,7 +70,10 @@ class _projectPageState extends State<projectPage> {
         'icon': Icons.medication,
         'color': Colors.red.shade400,
         'function': MaterialPageRoute(
-            builder: (BuildContext context) => const aboutMe())
+            builder: (BuildContext context) => const aboutMe()),
+        'webLink': Uri.parse("https://tbeidlershenk.github.io/Pitt-Challenge/"),
+        'githubLink':
+            Uri.parse("https://github.com/tbeidlershenk/Pitt-Challenge")
       },
       {
         'title': 'Tiger Tracker',
@@ -75,7 +82,9 @@ class _projectPageState extends State<projectPage> {
         'icon': Icons.bus_alert,
         'color': Colors.yellow.shade400,
         'function': MaterialPageRoute(
-            builder: (BuildContext context) => const aboutMe())
+            builder: (BuildContext context) => const aboutMe()),
+        'githubLink':
+            Uri.parse("https://github.com/jeffzheng13/tiger_track_public")
       },
       {
         'title': 'Schedule Builder',
@@ -85,17 +94,21 @@ class _projectPageState extends State<projectPage> {
         'icon': Icons.event_available,
         'color': Colors.blue.shade400,
         'function': MaterialPageRoute(
-            builder: (BuildContext context) => const aboutMe())
+            builder: (BuildContext context) => const aboutMe()),
+        'githubLink':
+            Uri.parse("https://github.com/nickusme/SteelHacks-Schedule-Builder")
       },
       {
         'title': 'Research Publication',
         'subtitle':
             'Ever wondered strategies beginner programmers use? Read more here, a paper I collaborated on with others.',
-        'image': '',
+        'image': 'assets/research.png',
         'icon': Icons.article,
         'color': Colors.purple.shade400,
         'function': MaterialPageRoute(
-            builder: (BuildContext context) => const aboutMe())
+            builder: (BuildContext context) => const aboutMe()),
+        'webLink': Uri.parse(
+            "https://isnap.csc.ncsu.edu/home/public/publication/skripchuk-2023-sigcse/")
       }
     ];
 
@@ -131,7 +144,10 @@ class _projectPageState extends State<projectPage> {
                     ]),
                   )),
               //Text("My Projects", style: TextStyle(fontSize: 30), ,),
-              Text("It's a work in progress :)", style: TextStyle(fontSize: 12),),
+              Text(
+                "It's a work in progress :)",
+                style: TextStyle(fontSize: 12, color: Colors.white),
+              ),
               Padding(padding: EdgeInsets.all(32)),
               FittedBox(
                 fit: BoxFit.fitWidth,

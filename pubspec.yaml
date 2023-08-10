@@ -107,6 +107,7 @@ flutter:
     - assets/bingsu.jpg
     - assets/lostatpittscreenshot.jpg
     - assets/research.png
+    - assets/HINTSLabLogo.png
 
   fonts:
     - family: Unbounded

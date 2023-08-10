@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
+import 'package:ionicons/ionicons.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 //ExpandingCards template courtesy of @BirjuVachhani
 
@@ -57,6 +59,8 @@ class _ExpandingCardsState extends State<ExpandingCards>
               learnMoreLink: item['function'],
               isExpanded: _selectedIndex == index,
               animation: _controller,
+              application: item['webLink'],
+              github: item['githubLink'],
               onTap: () => onExpand(_selectedIndex == index ? -1 : index),
             ),
           );
@@ -89,19 +93,22 @@ class AnimatedCardItem extends StatefulWidget {
   final VoidCallback onTap;
   final Color iconColor;
   final Route learnMoreLink;
+  final Uri? application;
+  final Uri? github;
 
-  const AnimatedCardItem({
-    super.key,
-    required this.title,
-    required this.subtitle,
-    required this.image,
-    required this.icon,
-    required this.animation,
-    required this.isExpanded,
-    required this.onTap,
-    required this.iconColor,
-    required this.learnMoreLink,
-  });
+  const AnimatedCardItem(
+      {super.key,
+      required this.title,
+      required this.subtitle,
+      required this.image,
+      required this.icon,
+      required this.animation,
+      required this.isExpanded,
+      required this.onTap,
+      required this.iconColor,
+      required this.learnMoreLink,
+      this.application,
+      this.github});
 
   @override
   State<AnimatedCardItem> createState() => _AnimatedCardItemState();
@@ -197,6 +204,63 @@ class _AnimatedCardItemState extends State<AnimatedCardItem> {
                         ),
                       ),
                     ),
+                    //Probably don't need the align
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 2,
+                          vertical: 8,
+                        ),
+                        child: Row(
+                          //mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            if (widget.isExpanded)
+                              //GestureDetector()
+                              Flexible(
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10),
+                                  child: Opacity(
+                                    opacity: titleValue,
+                                    child: Transform.translate(
+                                      offset: Offset(
+                                        20 * (1 - titleValue),
+                                        0,
+                                      ),
+                                      child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: [
+                                            if (widget.github != null) ...[
+                                              IconButton(
+                                                  onPressed: () => launchUrl(
+                                                      widget.github ??
+                                                          Uri.parse("")),
+                                                  icon: Icon(
+                                                    Ionicons.logo_github,
+                                                    size: 30,
+                                                  )),
+                                            ],
+                                            if (widget.application != null) ...[
+                                              IconButton(
+                                                  onPressed: () => launchUrl(
+                                                      widget.application ??
+                                                          Uri.parse("")),
+                                                  icon: Icon(
+                                                    Icons.link,
+                                                    size: 30,
+                                                  ))
+                                            ],
+                                          ]),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                          ],
+                        ),
+                      ),
+                    ),
                     Align(
                       alignment: Alignment.bottomLeft,
                       child: Padding(
@@ -223,6 +287,7 @@ class _AnimatedCardItemState extends State<AnimatedCardItem> {
                               ),
                             ),
                             if (widget.isExpanded)
+                              //GestureDetector()
                               Flexible(
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
@@ -251,7 +316,6 @@ class _AnimatedCardItemState extends State<AnimatedCardItem> {
                                         ),
                                       ),
                                       // const SizedBox(height: 2),
-
                                       Opacity(
                                         opacity: subtitleValue,
                                         child: Transform.translate(
@@ -276,7 +340,9 @@ class _AnimatedCardItemState extends State<AnimatedCardItem> {
                                                               widget.subtitle),
                                                       TextSpan(
                                                           text: "...learn more",
-                                                          style: TextStyle(color: Colors.grey.shade800),
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .white70),
                                                           recognizer:
                                                               TapGestureRecognizer()
                                                                 ..onTap = (() {
