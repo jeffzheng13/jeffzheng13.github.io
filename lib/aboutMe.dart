@@ -13,6 +13,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class aboutMe extends StatefulWidget {
   const aboutMe({super.key});
+  static const String route = '/aboutMe';
 
   @override
   State<aboutMe> createState() => _aboutMeState();
@@ -77,7 +78,8 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
                         width: 160,
                         height: 25,
                         animatedOn: AnimatedOn.onHover,
-                        textStyle: const TextStyle(color: Colors.black, fontSize: 15),
+                        textStyle:
+                            const TextStyle(color: Colors.black, fontSize: 15),
                         borderRadius: 60,
                         borderWidth: 1,
                         transitionType: TransitionType.LEFT_TO_RIGHT,
@@ -86,10 +88,7 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
                         borderColor: Colors.black,
                         text: "My Projects",
                         onPress: (() {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const projectPage()));
+                          Navigator.of(context).pushNamed(projectPage.route);
                         })),
 
                     //contains the icons to various links
@@ -131,7 +130,9 @@ class _aboutMeState extends State<aboutMe> with TickerProviderStateMixin {
         ),
         Padding(padding: EdgeInsets.all(10)),
         Text(
-            "Now that you're already here and you know a little about me, why don't you take a look at my projects.👇", textAlign: TextAlign.center,),
+          "Now that you're already here and you know a little about me, why don't you take a look at my projects.👇",
+          textAlign: TextAlign.center,
+        ),
       ]));
 
   //actions when icons are pressed

@@ -7,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class projectPage extends StatefulWidget {
   const projectPage({super.key});
+  static const String route = '/projects';
 
   @override
   State<projectPage> createState() => _projectPageState();

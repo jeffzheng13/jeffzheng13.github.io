@@ -13,6 +13,8 @@ TODO:
 class introPage extends StatefulWidget {
   const introPage({super.key});
 
+  static const String route = '/intro';
+
   @override
   State<introPage> createState() => _introPageState();
 }
@@ -91,10 +93,7 @@ class _introPageState extends State<introPage> {
                       width: 150,
                       height: 30,
                       onPress: (() {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const aboutMe()));
+                        Navigator.of(context).pushNamed(aboutMe.route);
                       }),
                       animatedOn: AnimatedOn.onHover,
                       textStyle:
@@ -113,10 +112,7 @@ class _introPageState extends State<introPage> {
                       width: 160,
                       height: 30,
                       onPress: (() {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const projectPage()));
+                        Navigator.of(context).pushNamed(projectPage.route);
                       }),
                       animatedOn: AnimatedOn.onHover,
                       textStyle: TextStyle(color: Colors.white, fontSize: 20),
