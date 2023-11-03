@@ -59,7 +59,7 @@ class _projectPageState extends State<projectPage> {
         'function': MaterialPageRoute(
             builder: (BuildContext context) => const aboutMe()),
         'webLink': Uri.parse(
-            "https://steelhacks-2023.github.io/Lost-and-Found-Steelhacks/#/"),
+            "https://steelhacks-2023.github.io/Lost-At-Pitt/"),
         'githubLink': Uri.parse(
             "https://github.com/Steelhacks-2023/Lost-and-Found-Steelhacks")
       },
