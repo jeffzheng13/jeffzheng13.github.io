@@ -182,15 +182,16 @@ if(r==null)r=null
 s=r}r=A.apV(A.aj0(B.zI,s==null?"auto":s))
 return new A.ae(r,new A.a3Y(),A.ab(r).h("ae<1,q>"))},
 ap8(a,b){return b+a},
-MT(){var s=0,r=A.X(t.e),q,p
+MT(){var s=0,r=A.X(t.e),q,p,o
 var $async$MT=A.Y(function(a,b){if(a===1)return A.U(b,r)
 while(true)switch(s){case 0:s=3
 return A.a_(A.a4b(A.anG()),$async$MT)
-case 3:s=4
-return A.a_(A.f6(self.window.CanvasKitInit({locateFile:A.aO(A.anZ())}),t.e),$async$MT)
-case 4:p=b
-if(A.abA(p.ParagraphBuilder)&&!A.adQ())throw A.d(A.bQ("The CanvasKit variant you are using only works on Chromium browsers. Please use a different CanvasKit variant, or use a Chromium browser."))
-q=p
+case 3:p=t.e
+s=4
+return A.a_(A.f6(self.window.CanvasKitInit(p.a({locateFile:A.aO(A.anZ())})),p),$async$MT)
+case 4:o=b
+if(A.abA(o.ParagraphBuilder)&&!A.adQ())throw A.d(A.bQ("The CanvasKit variant you are using only works on Chromium browsers. Please use a different CanvasKit variant, or use a Chromium browser."))
+q=o
 s=1
 break
 case 1:return A.V(q,r)}})
@@ -349,7 +350,7 @@ r=$.abP=new A.EV(new A.hB(s),Math.max(p,1),q,r)
 p=r}return p},
 ahM(a,b){var s,r,q
 t.m2.a(a)
-s={}
+s=t.e.a({})
 r=A.a80(a.a,a.b)
 s.fontFamilies=r
 s.heightMultiplier=a.d
@@ -366,7 +367,7 @@ s.forceStrutHeight=a.w
 s.strutEnabled=!0
 return s},
 a66(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,a0,a1){return new A.q6(b,c,d,e,f,m,k,a0,g,h,j,q,a1,o,p,r,a,n,s,i,l)},
-a8C(a,b){var s={}
+a8C(a,b){var s=t.e.a({})
 if(a!=null)s.weight=$.agl()[a.a]
 return s},
 a80(a,b){var s=A.a([],t.s)
@@ -20343,8 +20344,8 @@ return A.a_(q.b.$0(),$async$kJ)
 case 3:return A.V(null,r)}})
 return A.W($async$kJ,r)},
 a1I(){var s=A.aO(new A.NB(this))
-return{initializeEngine:A.aO(new A.NC(this)),autoStart:s}},
-UY(){return{runApp:A.aO(new A.Ny(this))}}}
+return t.e.a({initializeEngine:A.aO(new A.NC(this)),autoStart:s})},
+UY(){return t.e.a({runApp:A.aO(new A.Ny(this))})}}
 A.NB.prototype={
 $0(){return A.aeg(new A.NA(this.a).$0(),t.e)},
 $S:37}
@@ -20353,7 +20354,7 @@ $0(){var s=0,r=A.X(t.e),q,p=this
 var $async$$0=A.Y(function(a,b){if(a===1)return A.U(b,r)
 while(true)switch(s){case 0:s=3
 return A.a_(p.a.kJ(),$async$$0)
-case 3:q={}
+case 3:q=t.e.a({})
 s=1
 break
 case 1:return A.V(q,r)}})
@@ -20391,7 +20392,7 @@ K4(a,b){var s=0,r=A.X(t.H),q=this
 var $async$$2=A.Y(function(c,d){if(c===1)return A.U(d,r)
 while(true)switch(s){case 0:s=2
 return A.a_(q.a.b.$0(),$async$$2)
-case 2:A.abg(a,{})
+case 2:A.abg(a,t.e.a({}))
 return A.V(null,r)}})
 return A.W($async$$2,r)},
 $S:215}
@@ -20729,7 +20730,7 @@ $1(a){var s=$.bv
 s=(s==null?$.bv=A.dB(self.window.flutterConfiguration):s).b
 if(s==null)s=null
 else{s=s.canvasKitBaseUrl
-if(s==null)s=null}return(s==null?"https://www.gstatic.com/flutter-canvaskit/b20183e04096094bcc37d9cde2a4b96f5cc684cf/":s)+a},
+if(s==null)s=null}return(s==null?"https://www.gstatic.com/flutter-canvaskit/0545f8705df301877d787107bac1a6e9fc9ee1ad/":s)+a},
 $S:60}
 A.a4a.prototype={
 $1(a){this.a.remove()
@@ -21895,25 +21896,25 @@ s.setFillType($.a5P()[0])
 return A.a9v(s,B.aH)},
 Gx(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,a0,a1,a2){var s=t.yQ
 return A.a66(s.a(a),b,c,d,e,f,g,h,i,j,k,l,m,s.a(n),o,p,q,r,a0,a1,a2)},
-Gu(a,b,c,d,e,f,g,h,i,j,k,l){var s,r,q={},p=$.agp()[j.a]
-q.textAlign=p
-if(k!=null)q.textDirection=$.ags()[k.a]
-if(h!=null)q.maxLines=h
-p=f!=null
-if(p)q.heightMultiplier=f
+Gu(a,b,c,d,e,f,g,h,i,j,k,l){var s,r,q=t.e,p=q.a({}),o=$.agp()[j.a]
+p.textAlign=o
+if(k!=null)p.textDirection=$.ags()[k.a]
+if(h!=null)p.maxLines=h
+o=f!=null
+if(o)p.heightMultiplier=f
 s=l==null
-if(!s)q.textHeightBehavior=$.agt()[0]
-if(a!=null)q.ellipsis=a
-if(i!=null)q.strutStyle=A.ahM(i,l)
-q.replaceTabCharacters=!0
-r={}
+if(!s)p.textHeightBehavior=$.agt()[0]
+if(a!=null)p.ellipsis=a
+if(i!=null)p.strutStyle=A.ahM(i,l)
+p.replaceTabCharacters=!0
+r=q.a({})
 if(e!=null||!1)r.fontStyle=A.a8C(e,d)
 if(c!=null)A.abE(r,c)
-if(p)A.abG(r,f)
+if(o)A.abG(r,f)
 A.abD(r,A.a80(b,null))
-q.textStyle=r
-p=$.bc.aW().ParagraphStyle(q)
-return new A.z9(p,b,c,f,e,d,s?null:l.c)},
+p.textStyle=r
+q=$.bc.aW().ParagraphStyle(p)
+return new A.z9(q,b,c,f,e,d,s?null:l.c)},
 qo(a){var s,r,q=null
 t.Ar.a(a)
 s=A.a([],t.Cy)
@@ -22118,36 +22119,36 @@ r.dy!==$&&A.aI()
 r.dy=s
 q=s}return q}}
 A.Ow.prototype={
-$0(){var s,r,q,p,o,n,m,l,k,j,i,h,g=this.a,f=g.a,e=g.b,d=g.c,c=g.d,b=g.e,a=g.f,a0=g.w,a1=g.z,a2=g.Q,a3=g.as,a4=g.at,a5=g.ch,a6=g.CW,a7=g.cx,a8=g.db,a9={}
+$0(){var s,r,q,p,o,n,m,l,k,j,i,h,g=this.a,f=g.a,e=g.b,d=g.c,c=g.d,b=g.e,a=g.f,a0=g.w,a1=g.z,a2=g.Q,a3=g.as,a4=g.at,a5=g.ch,a6=g.CW,a7=g.cx,a8=g.db,a9=t.e,b0=a9.a({})
 if(a5!=null){s=A.pq(new A.R(a5.y))
-a9.backgroundColor=s}if(f!=null){s=A.pq(f)
-a9.color=s}if(e!=null){r=B.c.P($.bc.aW().NoDecoration)
+b0.backgroundColor=s}if(f!=null){s=A.pq(f)
+b0.color=s}if(e!=null){r=B.c.P($.bc.aW().NoDecoration)
 s=e.a
 if((s|1)===s)r=(r|B.c.P($.bc.aW().UnderlineDecoration))>>>0
 if((s|2)===s)r=(r|B.c.P($.bc.aW().OverlineDecoration))>>>0
 if((s|4)===s)r=(r|B.c.P($.bc.aW().LineThroughDecoration))>>>0
-a9.decoration=r}if(b!=null)a9.decorationThickness=b
+b0.decoration=r}if(b!=null)b0.decorationThickness=b
 if(d!=null){s=A.pq(d)
-a9.decorationColor=s}if(c!=null)a9.decorationStyle=$.agr()[c.a]
-if(a0!=null)a9.textBaseline=$.agq()[a0.a]
-if(a1!=null)A.abE(a9,a1)
-if(a2!=null)a9.letterSpacing=a2
-if(a3!=null)a9.wordSpacing=a3
-if(a4!=null)A.abG(a9,a4)
+b0.decorationColor=s}if(c!=null)b0.decorationStyle=$.agr()[c.a]
+if(a0!=null)b0.textBaseline=$.agq()[a0.a]
+if(a1!=null)A.abE(b0,a1)
+if(a2!=null)b0.letterSpacing=a2
+if(a3!=null)b0.wordSpacing=a3
+if(a4!=null)A.abG(b0,a4)
 switch(g.ax){case null:case void 0:break
-case B.uv:A.abF(a9,!0)
+case B.uv:A.abF(b0,!0)
 break
-case B.uu:A.abF(a9,!1)
+case B.uu:A.abF(b0,!1)
 break}q=g.dx
 if(q===$){p=A.a80(g.x,g.y)
 g.dx!==$&&A.aI()
 g.dx=p
-q=p}A.abD(a9,q)
-if(a!=null||!1)a9.fontStyle=A.a8C(a,g.r)
+q=p}A.abD(b0,q)
+if(a!=null||!1)b0.fontStyle=A.a8C(a,g.r)
 if(a6!=null){g=A.pq(new A.R(a6.y))
-a9.foregroundColor=g}if(a7!=null){o=A.a([],t.J)
+b0.foregroundColor=g}if(a7!=null){o=A.a([],t.J)
 for(g=a7.length,n=0;n<a7.length;a7.length===g||(0,A.C)(a7),++n){m=a7[n]
-l={}
+l=a9.a({})
 s=A.pq(m.a)
 l.color=s
 s=m.b
@@ -22157,12 +22158,12 @@ k[1]=s.b
 l.offset=k
 s=m.c
 l.blurRadius=s
-o.push(l)}a9.shadows=o}if(a8!=null){j=A.a([],t.J)
+o.push(l)}b0.shadows=o}if(a8!=null){j=A.a([],t.J)
 for(g=a8.length,n=0;n<a8.length;a8.length===g||(0,A.C)(a8),++n){i=a8[n]
-h={}
+h=a9.a({})
 h.axis=i.a
 h.value=i.b
-j.push(h)}a9.fontVariations=j}return $.bc.aW().TextStyle(a9)},
+j.push(h)}b0.fontVariations=j}return $.bc.aW().TextStyle(b0)},
 $S:37}
 A.z8.prototype={
 gmH(a){return this.d},
@@ -25898,7 +25899,7 @@ s=1
 break}j=n.x
 j.d=null
 p=4
-m=new globalThis.window.ImageDecoder({type:n.a,data:n.b,premultiplyAlpha:"premultiply",colorSpaceConversion:"default",preferAnimation:!0})
+m=new globalThis.window.ImageDecoder(t.e.a({type:n.a,data:n.b,premultiplyAlpha:"premultiply",colorSpaceConversion:"default",preferAnimation:!0}))
 i=t.H
 s=7
 return A.a_(A.f6(m.tracks.ready,i),$async$kp)
@@ -25936,7 +25937,7 @@ h=A
 s=4
 return A.a_(p.kp(),$async$fH)
 case 4:s=3
-return A.a_(h.f6(b.decode({frameIndex:p.r}),l),$async$fH)
+return A.a_(h.f6(b.decode(l.a({frameIndex:p.r})),l),$async$fH)
 case 3:k=b.image
 j=p.r
 i=p.d
@@ -61490,13 +61491,13 @@ $S:28}
 A.ms.prototype={
 ak(){return new A.MO(B.j)}}
 A.MO.prototype={
-S(a){var s,r,q,p=null,o="https://steelhacks-2023.github.io/Lost-and-Found-Steelhacks/#/",n=A.cA(a,p,t.w).w
-A.ck(o,0,p)
+S(a){var s,r,q,p=null,o=A.cA(a,p,t.w).w
+A.ck("https://steelhacks-2023.github.io/Lost-and-Found-Steelhacks/#/",0,p)
 A.ck("https://tbeidlershenk.github.io/Pitt-Challenge/index.html",0,p)
 s=t.z
 r=t.N
-q=A.a([A.aB(["title","Lost@Pitt","subtitle","A virtual lost and found application","image","assets/lostatpittscreenshot.jpg","icon",B.ys,"color",B.xa,"function",A.rJ(new A.a4z(),p,s),"webLink",A.ck(o,0,p),"githubLink",A.ck("https://github.com/Steelhacks-2023/Lost-and-Found-Steelhacks",0,p)],r,s),A.aB(["title","Pill Identifier","subtitle","Machine learning model that was trained and transformed into an application that can identify pills.","image","assets/cutePill.png","icon",B.yr,"color",B.xd,"function",A.rJ(new A.a4A(),p,s),"webLink",A.ck("https://tbeidlershenk.github.io/Pitt-Challenge/",0,p),"githubLink",A.ck("https://github.com/tbeidlershenk/Pitt-Challenge",0,p)],r,s),A.aB(["title","Tiger Tracker","subtitle","A bus tracking solution that utilizes ","image","assets/stemgearlogo.png","icon",B.yo,"color",B.xg,"function",A.rJ(new A.a4B(),p,s),"githubLink",A.ck("https://github.com/jeffzheng13/tiger_track_public",0,p)],r,s),A.aB(["title","Schedule Builder","subtitle","An application that determines the slots where people have open time slots in a given week","image","assets/schedule.jpg","icon",B.yp,"color",B.iS,"function",A.rJ(new A.a4C(),p,s),"githubLink",A.ck("https://github.com/nickusme/SteelHacks-Schedule-Builder",0,p)],r,s),A.aB(["title","Research Publication","subtitle","Ever wondered strategies beginner programmers use? Read more here, a paper I collaborated on with others.","image","assets/research.png","icon",B.yn,"color",B.xc,"function",A.rJ(new A.a4D(),p,s),"webLink",A.ck("https://isnap.csc.ncsu.edu/home/public/publication/skripchuk-2023-sigcse/",0,p)],r,s)],t.cs)
-return A.a7e(B.de,A.ali(A.Ok(A.OM(A.a([new A.e8(B.d5,p,p,A.lY(A.a9e(A.a([A.WN("Code",!0,A.eY(p,p,B.h,p,p,p,p,p,p,p,p,40,p,p,p,p,p,!0,p,p,p,p,p,p,p,p)),A.WN("Build",!0,A.eY(p,p,B.h,p,p,p,p,p,p,p,p,40,p,p,p,p,p,!0,p,p,p,p,p,p,p,p)),A.WN("Hack",!0,A.eY(p,p,B.h,p,p,p,p,p,p,p,p,40,p,p,p,p,p,!0,p,p,p,p,p,p,p,p)),A.WN("My Projects",!1,A.eY(p,p,B.h,p,p,p,p,p,p,p,p,40,p,p,p,p,p,!0,p,p,p,p,p,p,p,p))],t.rr),1),n.a.b/12,p),p),A.od("It's a work in progress :)",p,p,A.eY(p,p,B.h,p,p,p,p,p,p,p,p,12,p,p,p,p,p,!0,p,p,p,p,p,p,p,p),p),new A.ch(new A.b_(32,32,32,32),p,p),new A.Ar(B.vx,new A.qO(q,p),p)],t.F),B.a8,B.fG,B.af),p,p),!0))}}
+q=A.a([A.aB(["title","Lost@Pitt","subtitle","A virtual lost and found application","image","assets/lostatpittscreenshot.jpg","icon",B.ys,"color",B.xa,"function",A.rJ(new A.a4z(),p,s),"webLink",A.ck("https://steelhacks-2023.github.io/Lost-At-Pitt/",0,p),"githubLink",A.ck("https://github.com/Steelhacks-2023/Lost-and-Found-Steelhacks",0,p)],r,s),A.aB(["title","Pill Identifier","subtitle","Machine learning model that was trained and transformed into an application that can identify pills.","image","assets/cutePill.png","icon",B.yr,"color",B.xd,"function",A.rJ(new A.a4A(),p,s),"webLink",A.ck("https://tbeidlershenk.github.io/Pitt-Challenge/",0,p),"githubLink",A.ck("https://github.com/tbeidlershenk/Pitt-Challenge",0,p)],r,s),A.aB(["title","Tiger Tracker","subtitle","A bus tracking solution that utilizes ","image","assets/stemgearlogo.png","icon",B.yo,"color",B.xg,"function",A.rJ(new A.a4B(),p,s),"githubLink",A.ck("https://github.com/jeffzheng13/tiger_track_public",0,p)],r,s),A.aB(["title","Schedule Builder","subtitle","An application that determines the slots where people have open time slots in a given week","image","assets/schedule.jpg","icon",B.yp,"color",B.iS,"function",A.rJ(new A.a4C(),p,s),"githubLink",A.ck("https://github.com/nickusme/SteelHacks-Schedule-Builder",0,p)],r,s),A.aB(["title","Research Publication","subtitle","Ever wondered strategies beginner programmers use? Read more here, a paper I collaborated on with others.","image","assets/research.png","icon",B.yn,"color",B.xc,"function",A.rJ(new A.a4D(),p,s),"webLink",A.ck("https://isnap.csc.ncsu.edu/home/public/publication/skripchuk-2023-sigcse/",0,p)],r,s)],t.cs)
+return A.a7e(B.de,A.ali(A.Ok(A.OM(A.a([new A.e8(B.d5,p,p,A.lY(A.a9e(A.a([A.WN("Code",!0,A.eY(p,p,B.h,p,p,p,p,p,p,p,p,40,p,p,p,p,p,!0,p,p,p,p,p,p,p,p)),A.WN("Build",!0,A.eY(p,p,B.h,p,p,p,p,p,p,p,p,40,p,p,p,p,p,!0,p,p,p,p,p,p,p,p)),A.WN("Hack",!0,A.eY(p,p,B.h,p,p,p,p,p,p,p,p,40,p,p,p,p,p,!0,p,p,p,p,p,p,p,p)),A.WN("My Projects",!1,A.eY(p,p,B.h,p,p,p,p,p,p,p,p,40,p,p,p,p,p,!0,p,p,p,p,p,p,p,p))],t.rr),1),o.a.b/12,p),p),A.od("It's a work in progress :)",p,p,A.eY(p,p,B.h,p,p,p,p,p,p,p,p,12,p,p,p,p,p,!0,p,p,p,p,p,p,p,p),p),new A.ch(new A.b_(32,32,32,32),p,p),new A.Ar(B.vx,new A.qO(q,p),p)],t.F),B.a8,B.fG,B.af),p,p),!0))}}
 A.a4z.prototype={
 $1(a){return B.d3},
 $S:28}
@@ -63762,7 +63763,7 @@ B.w4=function() {
     }
   }
   function getUnknownTagGenericBrowser(object, tag) {
-    if (self.HTMLElement && object instanceof HTMLElement) return "HTMLElement";
+    if (object instanceof HTMLElement) return "HTMLElement";
     return getUnknownTag(object, tag);
   }
   function prototypeForTag(tag) {
@@ -63773,7 +63774,7 @@ B.w4=function() {
     return constructor.prototype;
   }
   function discriminator(tag) { return null; }
-  var isBrowser = typeof navigator == "object";
+  var isBrowser = typeof HTMLElement == "function";
   return {
     getTag: getTag,
     getUnknownTag: isBrowser ? getUnknownTagGenericBrowser : getUnknownTag,
@@ -63783,9 +63784,10 @@ B.w4=function() {
 B.w9=function(getTagFallback) {
   return function(hooks) {
     if (typeof navigator != "object") return hooks;
-    var ua = navigator.userAgent;
-    if (ua.indexOf("DumpRenderTree") >= 0) return hooks;
-    if (ua.indexOf("Chrome") >= 0) {
+    var userAgent = navigator.userAgent;
+    if (typeof userAgent != "string") return hooks;
+    if (userAgent.indexOf("DumpRenderTree") >= 0) return hooks;
+    if (userAgent.indexOf("Chrome") >= 0) {
       function confirm(p) {
         return typeof window == "object" && window[p] && window[p].name == p;
       }
@@ -63798,26 +63800,10 @@ B.w5=function(hooks) {
   if (typeof dartExperimentalFixupGetTag != "function") return hooks;
   hooks.getTag = dartExperimentalFixupGetTag(hooks.getTag);
 }
-B.w6=function(hooks) {
-  var getTag = hooks.getTag;
-  var prototypeForTag = hooks.prototypeForTag;
-  function getTagFixed(o) {
-    var tag = getTag(o);
-    if (tag == "Document") {
-      if (!!o.xmlVersion) return "!Document";
-      return "!HTMLDocument";
-    }
-    return tag;
-  }
-  function prototypeForTagFixed(tag) {
-    if (tag == "Document") return null;
-    return prototypeForTag(tag);
-  }
-  hooks.getTag = getTagFixed;
-  hooks.prototypeForTag = prototypeForTagFixed;
-}
 B.w8=function(hooks) {
-  var userAgent = typeof navigator == "object" ? navigator.userAgent : "";
+  if (typeof navigator != "object") return hooks;
+  var userAgent = navigator.userAgent;
+  if (typeof userAgent != "string") return hooks;
   if (userAgent.indexOf("Firefox") == -1) return hooks;
   var getTag = hooks.getTag;
   var quickMap = {
@@ -63834,7 +63820,9 @@ B.w8=function(hooks) {
   hooks.getTag = getTagFirefox;
 }
 B.w7=function(hooks) {
-  var userAgent = typeof navigator == "object" ? navigator.userAgent : "";
+  if (typeof navigator != "object") return hooks;
+  var userAgent = navigator.userAgent;
+  if (typeof userAgent != "string") return hooks;
   if (userAgent.indexOf("Trident/") == -1) return hooks;
   var getTag = hooks.getTag;
   var quickMap = {
@@ -63861,6 +63849,24 @@ B.w7=function(hooks) {
   }
   hooks.getTag = getTagIE;
   hooks.prototypeForTag = prototypeForTagIE;
+}
+B.w6=function(hooks) {
+  var getTag = hooks.getTag;
+  var prototypeForTag = hooks.prototypeForTag;
+  function getTagFixed(o) {
+    var tag = getTag(o);
+    if (tag == "Document") {
+      if (!!o.xmlVersion) return "!Document";
+      return "!HTMLDocument";
+    }
+    return tag;
+  }
+  function prototypeForTagFixed(tag) {
+    if (tag == "Document") return null;
+    return prototypeForTag(tag);
+  }
+  hooks.getTag = getTagFixed;
+  hooks.prototypeForTag = prototypeForTagFixed;
 }
 B.iu=function(hooks) { return hooks; }
 
@@ -66182,7 +66188,7 @@ s($,"atl","afW",()=>A.aB([B.jm,A.ae_("grapheme"),B.jn,A.ae_("word")],A.a6("rh"),
 s($,"aug","agB",()=>A.ae2())
 s($,"auf","agA",()=>{var q=A.z(self.window,"trustedTypes")
 q.toString
-return A.anF(q,"createPolicy",A.alY("flutter-engine"),{createScriptURL:A.aah(new A.a4H())})})
+return A.anF(q,"createPolicy",A.alY("flutter-engine"),t.e.a({createScriptURL:A.aah(new A.a4H())}))})
 r($,"auh","agC",()=>self.window.FinalizationRegistry!=null)
 s($,"ati","afT",()=>B.G.bk(A.aB(["type","fontsChange"],t.N,t.z)))
 s($,"aup","a92",()=>{var q=A.ae0()
