@@ -72,9 +72,9 @@ class _projectPageState extends State<projectPage> {
         'color': Colors.red.shade400,
         'function': MaterialPageRoute(
             builder: (BuildContext context) => const aboutMe()),
-        'webLink': Uri.parse("https://tbeidlershenk.github.io/Pitt-Challenge/"),
+        'webLink': Uri.parse("https://tbeidlershenk.github.io/pitt-challenge/"),
         'githubLink':
-            Uri.parse("https://github.com/tbeidlershenk/Pitt-Challenge")
+            Uri.parse("https://github.com/tbeidlershenk/pitt-challenge")
       },
       {
         'title': 'Tiger Tracker',
